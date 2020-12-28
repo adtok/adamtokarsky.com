@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   // purge: ["./pages/**/*.{js, mdx}", "./components/**/*.js"],
   // purge: [],
-  purge: ["./src/**/*.{js,mdx}", "./next.config.js"],
+  purge: ["./**/*.{js,mdx}", "./next.config.js"],
 
   darkMode: false, // or 'media' or 'class'
   theme: {
