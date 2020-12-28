@@ -2,6 +2,7 @@ const withMdxEnhanced = require("next-mdx-enhanced");
 const remarkMath = require("remark-math");
 const rehypeKatex = require("rehype-katex");
 const rehypePrism = require("@mapbox/rehype-prism");
+const visit = require("unist-util-visit");
 
 const tokenClassNames = {
   tag: "text-code-red",
@@ -21,7 +22,21 @@ module.exports = withMdxEnhanced({
   layoutPath: "layouts",
   defaultLayout: true,
   remarkPlugins: [remarkMath],
-  rehypePlugins: [rehypeKatex, rehypePrism],
+  rehypePlugins: [
+    rehypeKatex,
+    rehypePrism,
+    () => {
+      // stolen from blog.tailwindcss.com
+      return (tree) => {
+        visit(tree, "element", (node, index, parent) => {
+          let [token, type] = node.properties.className || [];
+          if (token === "token") {
+            node.properties.className = [tokenClassNames[type]];
+          }
+        });
+      };
+    },
+  ],
 })({
   pageExtensions: ["js", "jsx", "md", "mdx"],
 });
