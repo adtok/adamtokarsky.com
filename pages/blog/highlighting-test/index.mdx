@@ -1,0 +1,68 @@
+---
+title: highlighting test
+date: 2020-12-29
+---
+
+# Heading One
+
+Some text
+
+## Heading two
+
+### Heading 3
+
+#### heading 4 lol
+
+```python
+import numpy as np
+import matplotlib.pyplot as plt
+
+class TestClass(list):
+  def __init__(self):
+    self.x = 123
+
+for i in range(len([1,2,3,4, 5])):
+  print(f"{i} was printed")
+
+x = { "1" : 100 }
+
+def func(x):
+  print(x)
+
+```
+
+```c
+#include<stdio.h>
+
+void main(int argc, *char argv[]) {
+  int x = 1;
+  printf("test %d\n", x);
+
+  return 0;
+}
+```
+
+
+```ruby
+require "gem"
+
+number = 0
+regexp = /[abc]/
+
+# This is a comment
+class Person
+
+  attr_accessor :name
+
+  def initialize(attributes = {})
+    @name = attributes[:name]
+  end
+
+  def self.greet
+    "hello"
+  end
+end
+
+person1 = Person.new(:name => "Chris")
+puts "#{Person::greet} #{person1.name}\n"
+```

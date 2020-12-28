@@ -3,17 +3,17 @@ module.exports = {
   purge: ["./pages/**/*.js", "./components/**/*.js"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    screens: {
-      xs: "375px",
-      smm: "425px",
-      sm: "640px",
-      md: "768px",
-      lg: "1024px",
-      xl: "1280px",
-    },
+    // screens: {
+    //   xs: "375px",
+    //   smm: "425px",
+    //   sm: "640px",
+    //   md: "768px",
+    //   lg: "1024px",
+    //   xl: "1280px",
+    // },
     extend: {
       fontFamily: {
-        sans: ["Inter var", ...defaultTheme.fontFamily.sans],
+        sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
       colors: {
         code: {

@@ -2,21 +2,14 @@ import { MDXProvider } from "@mdx-js/react";
 
 function Layout({ children, frontMatter }) {
   return (
-    <div>
-      <pre>{JSON.stringify(frontMatter, null, 2)}</pre>
-      <article className="prose">
+    <div className="prose md:prose-md ">
+      <h1>Article title</h1>
+      {/* <article className="prose md:prose-lg"> */}
+      <article>
         <MDXProvider>{children}</MDXProvider>
       </article>
     </div>
   );
 }
-
-const components = {
-  div: ({ children, ...rest }) => (
-    <div className="prose" {...rest}>
-      {children}
-    </div>
-  ),
-};
 
 export default Layout;

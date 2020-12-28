@@ -7,6 +7,10 @@ function BlogIndex() {
 
 export const getStaticProps = async () => {
   getPostSlugs();
+
+  return {
+    props: {},
+  };
 };
 
 export default BlogIndex;
