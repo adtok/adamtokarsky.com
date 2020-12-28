@@ -1,8 +1,8 @@
 import "../fonts/Inter/inter.css";
 import Head from "next/head";
 import Link from "next/link";
-import "../styles/globals.css";
-// import "tailwindcss/tailwind.css";
+// import "../styles/globals.css";
+import "tailwindcss/tailwind.css";
 import "katex/dist/katex.min.css";
 
 function MyApp({ Component, pageProps }) {
@@ -10,7 +10,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <div className="flex flex-col min-h-screen font-sans text-base antialiased text-gray-800">
         <header className="">
-          <div className="md:flex max-w-2xl mx-auto justify-center md:justify-between p-4 items-center">
+          <div className="sm:flex max-w-3xl mx-auto justify-center md:justify-between p-4 items-center">
             <div className="flex-1 bg-gray-100 flex-shrink-0 justify-center lg:items-start">
               <h1 className="text-2xl font-semibold uppercase">
                 <span className="font-light">Adam</span>Tokarsky
