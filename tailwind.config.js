@@ -2,7 +2,7 @@ const defaultTheme = require("tailwindcss/defaultTheme");
 module.exports = {
   // purge: ["./pages/**/*.{js, mdx}", "./components/**/*.js"],
   // purge: [],
-  purge: ["./pages/**/*.{js,mdx}", "./components/**/*.{js,mdx}", "./next.config.js"],
+  purge: ["./**/*.{js,mdx}", "./next.config.js"],
 
   darkMode: false, // or 'media' or 'class'
   theme: {
@@ -18,6 +18,7 @@ module.exports = {
       fontFamily: {
         sans: ["Inter", ...defaultTheme.fontFamily.sans],
       },
+      borderColor: (theme) => theme("colors.gray.700"),
       colors: {
         code: {
           green: "#b5f4a5",
@@ -32,6 +33,10 @@ module.exports = {
         default: {
           css: {
             color: theme("colors.gray.700"),
+            h1: {
+              fontWeight: "800",
+              letterSpacing: theme("letterSpacing.tight"),
+            },
             h2: {
               fontWeight: "700",
               letterSpacing: theme("letterSpacing.tight"),
@@ -61,6 +66,9 @@ module.exports = {
             blockquote: {
               color: theme("colors.gray.900"),
               borderLeftColor: theme("colors.gray.200"),
+            },
+            "span .vlist": {
+              borderColor: theme("colors.gray.800"),
             },
           },
         },

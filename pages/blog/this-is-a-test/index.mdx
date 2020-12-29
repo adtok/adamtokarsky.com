@@ -1,10 +1,16 @@
 ---
-title: title
+title: My blog post I'm using to try out a bunch of different things
 date: "2020-12-27"
 ---
 
 import "katex/dist/katex.min.css";
 
+
+## this is my first subsection of the blog
+
+This is some supporting text
+
+### Here is another subsection
 
 my blog can render math, see $\sqrt{x^2}$ works!
 $\frac{\sqrt{x}}{3}$
@@ -18,4 +24,41 @@ $$
 print('hello world')
 ```
 
-I just want to write a bunch of stuff. I just want to write a bunch of stuff. I just want to write a bunch of stuff. I just want to write a bunch of stuff. I just want to write a bunch of stuff. I just want to write a bunch of stuff. I just want to write a bunch of stuff.
+```typescript
+import express from "express";
+
+const app = express();
+
+app.get("/", (req: Request, res: Response) => {
+  const { email } = req.body;
+
+  res.status(200).json({ email, msg: "all good homie"})
+})
+```
+
+```jsx
+const Header = ({ children }) => (<header className="text-gray-900">{children}</header>)
+```
+
+```html
+<h1 class="text-gray-400">Adam Tokarsky</h1>
+```
+
+I just want to write a bunch of stuff.
+I just want to write a bunch of stuff.
+I just want to write a bunch of stuff.
+I just want to write a bunch of stuff.
+I just want to write a bunch of stuff.
+I just want to write a bunch of stuff.
+I just want to write a bunch of stuff.
+
+1. a list
+2. a list
+
+- first
+  1. first
+  2. second
+  3. third
+  4. fourth
+- second
+- third
