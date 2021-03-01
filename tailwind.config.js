@@ -34,8 +34,9 @@ module.exports = {
           css: {
             color: theme("colors.gray.700"),
             h1: {
-              fontWeight: "800",
+              fontWeight: "600",
               letterSpacing: theme("letterSpacing.tight"),
+              fontSize: theme("text.2xl")
             },
             h2: {
               fontWeight: "700",

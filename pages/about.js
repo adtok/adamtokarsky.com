@@ -1,7 +1,9 @@
 import React from "react";
 
 function AboutIndex() {
-  return <div>About em</div>;
+  return <div>
+    
+  </div>;
 }
 
 export default AboutIndex;

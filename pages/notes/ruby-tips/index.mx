@@ -1,0 +1,10 @@
+---
+name: ruby tips
+date: 2021-02-05
+---
+
+
+```ruby
+$_ # the last thing read by gets
+~/$/ #the size of the last thing read by gets
+```
